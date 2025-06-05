@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Theme toggle functionality
+    // Theme toggle
     const themeToggle = document.getElementById("theme-toggle")
     const themeText = document.getElementById("theme-text")
     const body = document.body
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       themeText.textContent = isDarkMode ? "Light Mode" : "Dark Mode"
     })
   
-    // Dropdown functionality
+    // Dropdown 
     const dropdownToggle = document.querySelector(".dropdown-toggle")
     const dropdownMenu = document.querySelector(".dropdown-menu")
     const selectedRegion = document.getElementById("selected-region")
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
   
-    // Initialize
+    
     fetchCountries()
   })
   

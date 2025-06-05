@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Theme toggle functionality
+    // Theme toggle 
     const themeToggle = document.getElementById("theme-toggle")
     const themeText = document.getElementById("theme-text")
     const body = document.body
@@ -18,13 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
       themeText.textContent = isDarkMode ? "Light Mode" : "Dark Mode"
     })
   
-    // Back button functionality
+    // Back button 
     const backButton = document.getElementById("back-button")
     backButton.addEventListener("click", () => {
       window.location.href = "index.html"
     })
   
-    // Get country code from URL
+    // Get country code 
     const urlParams = new URLSearchParams(window.location.search)
     const countryCode = urlParams.get("code")
   
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const countryDetail = document.getElementById("country-detail")
     const loading = document.getElementById("loading")
   
-    // Fetch country data
+    //  country data
     async function fetchCountryData() {
       try {
         const response = await fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`)
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   
-    // Fetch border countries
+    // border countries
     async function fetchBorderCountries(borders) {
       try {
         const response = await fetch(`https://restcountries.com/v3.1/alpha?codes=${borders.join(",")}&fields=name,cca3`)
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   
-    // Render country detail
+    // Render country 
     function renderCountryDetail(country) {
       const nativeName = getNativeName(country)
       const currencies = getCurrencies(country)
@@ -152,7 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return population.toLocaleString()
     }
   
-    // Initialize
     fetchCountryData()
   })
   
